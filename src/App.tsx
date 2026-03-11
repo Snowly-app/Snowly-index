@@ -1,7 +1,7 @@
 import { Footer } from './components/layout/Footer';
 import { Navbar } from './components/layout/Navbar';
 import { Home } from './pages/Home';
-import './App.css';
+import './styles/globals.css';
 
 const App = () => {
   return (

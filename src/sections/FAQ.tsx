@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { useState } from 'react';
 
 const faqs = [
   {
@@ -20,12 +20,7 @@ const faqs = [
   {
     question: 'Is Snowly really completely open source?',
     answer:
-      'Absolutely. The core tracking logic, the UI, and the trajectory parsers are entirely open source. You can inspect the repo, contribute features, and own the software you trust your safety with.',
-  },
-  {
-    question: 'How does it automatically know when I\'m on a chairlift?',
-    answer:
-      'Snowly doesn\'t just rely on GPS speed. It combines altitude trends with CoreMotion accelerometer data to accurately distinguish true ski runs from riding a lift or gondola.',
+      'Absolutely. Our entire stack, including both the frontend app and the backend infrastructure, is 100% open source. You can inspect the repo, contribute features, and own the software you trust your safety with.',
   },
 ];
 
@@ -37,34 +32,37 @@ export function FAQ() {
   };
 
   return (
-    <section id="faq" className="py-32 relative bg-zinc-950">
+    <section id="faq" className="py-32 relative bg-white">
       <div className="container mx-auto px-6 max-w-4xl relative z-10">
         <div className="mb-20">
-          <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-none text-white/90">
+          <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-none text-slate-900">
             Questions? <br />
-            <span className="text-white/40">We have answers.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-accent">We have answers.</span>
           </h2>
         </div>
 
-        <div className="flex flex-col border-t border-white/10">
+        <div className="flex flex-col border-t border-slate-100">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
               <div
-                key={index}
-                className="border-b border-white/10 group"
+                key={faq.question}
+                className="border-b border-slate-100 group"
               >
                 <button
+                  type="button"
                   onClick={() => toggleFAQ(index)}
                   className="w-full flex justify-between items-center py-8 text-left focus:outline-none"
                   aria-expanded={isOpen}
                 >
-                  <span className="text-2xl md:text-3xl font-bold tracking-tight text-white/90 group-hover:text-white transition-colors">
+                  <span className="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 group-hover:text-brand transition-colors">
                     {faq.question}
                   </span>
                   <ChevronDown
-                    className={`w-8 h-8 text-white/30 transition-transform duration-500 ${
-                      isOpen ? 'transform rotate-180 text-primary' : 'group-hover:text-white/60'
+                    className={`w-8 h-8 transition-transform duration-500 ${
+                      isOpen
+                        ? 'transform rotate-180 text-brand'
+                        : 'text-slate-300 group-hover:text-slate-500'
                     }`}
                   />
                 </button>
@@ -73,7 +71,7 @@ export function FAQ() {
                     isOpen ? 'max-h-96 opacity-100 pb-8' : 'max-h-0 opacity-0'
                   }`}
                 >
-                  <p className="text-xl md:text-2xl text-white/50 font-light leading-relaxed max-w-3xl">
+                  <p className="text-xl md:text-2xl text-slate-500 font-light leading-relaxed max-w-3xl">
                     {faq.answer}
                   </p>
                 </div>

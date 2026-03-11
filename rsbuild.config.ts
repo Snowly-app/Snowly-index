@@ -6,6 +6,6 @@ export default defineConfig({
   plugins: [pluginReact()],
   html: {
     title: 'Snowly',
-    favicon: './public/favicon.png'
-  }
+    favicon: './public/favicon.png',
+  },
 });

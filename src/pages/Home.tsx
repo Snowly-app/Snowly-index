@@ -1,9 +1,8 @@
 import { Community } from '../sections/Community';
-import { BrandPhilosophy } from '../sections/BrandPhilosophy';
 import { DownloadCTA } from '../sections/DownloadCTA';
+import { FAQ } from '../sections/FAQ';
 import { Features } from '../sections/Features';
 import { Hero } from '../sections/Hero';
-import { FAQ } from '../sections/FAQ';
 import { VisualShowcase } from '../sections/VisualShowcase';
 
 export function Home() {
@@ -12,9 +11,8 @@ export function Home() {
       <Hero />
       <VisualShowcase />
       <Features />
-      <Community />
       <FAQ />
-      <BrandPhilosophy />
+      <Community />
       <DownloadCTA />
     </main>
   );

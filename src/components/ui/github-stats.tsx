@@ -1,5 +1,5 @@
+import { GitFork, Star } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { Star, GitFork } from 'lucide-react';
 
 interface GitHubStats {
   stars: number | null;
@@ -8,7 +8,11 @@ interface GitHubStats {
   error: boolean;
 }
 
-export function GithubStatsBadge({ repo = 'Snowly-index/Snowly-index' }: { repo?: string }) {
+export function GithubStatsBadge({
+  repo = 'Snowly-index/Snowly-index',
+}: {
+  repo?: string;
+}) {
   const [stats, setStats] = useState<GitHubStats>({
     stars: null,
     forks: null,
@@ -41,23 +45,23 @@ export function GithubStatsBadge({ repo = 'Snowly-index/Snowly-index' }: { repo?
 
   return (
     <div className="flex items-center gap-4 mt-6 justify-center animate-fade-in opacity-80 hover:opacity-100 transition-opacity">
-      <a 
-        href={`https://github.com/${repo}/stargazers`} 
-        target="_blank" 
+      <a
+        href={`https://github.com/${repo}/stargazers`}
+        target="_blank"
         rel="noreferrer"
-        className="flex items-center gap-1.5 text-sm font-medium text-white/70 hover:text-white transition-colors bg-white/5 border border-white/10 rounded-full px-3 py-1"
+        className="flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-slate-800 transition-colors bg-white border border-slate-200 shadow-sm rounded-full px-3 py-1"
       >
         <Star className="w-4 h-4 text-yellow-500 fill-yellow-500/20" />
         <span>{stats.stars?.toLocaleString() || 0} Stars</span>
       </a>
-      
-      <a 
-        href={`https://github.com/${repo}/network/members`} 
-        target="_blank" 
+
+      <a
+        href={`https://github.com/${repo}/network/members`}
+        target="_blank"
         rel="noreferrer"
-        className="flex items-center gap-1.5 text-sm font-medium text-white/70 hover:text-white transition-colors bg-white/5 border border-white/10 rounded-full px-3 py-1"
+        className="flex items-center gap-1.5 text-sm font-medium text-slate-500 hover:text-slate-800 transition-colors bg-white border border-slate-200 shadow-sm rounded-full px-3 py-1"
       >
-        <GitFork className="w-4 h-4 text-white/70" />
+        <GitFork className="w-4 h-4 text-slate-400" />
         <span>{stats.forks?.toLocaleString() || 0} Forks</span>
       </a>
     </div>

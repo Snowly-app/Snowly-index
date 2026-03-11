@@ -1,36 +1,57 @@
-// Intentionally left blank or remove the lines
-
-
 export function DownloadCTA() {
   return (
-    <section className="py-32 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/10 -z-10" />
+    <section className="py-48 relative overflow-hidden bg-white">
+      {/* Background Atmosphere */}
+      <div className="absolute inset-0 bg-gradient-to-b from-slate-50 to-white -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-brand/10 rounded-full blur-[120px] -z-10 animate-pulse duration-[10s]" />
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-3xl mx-auto text-center space-y-8 bg-white/5 border border-white/10 rounded-[3rem] p-12 md:p-20 backdrop-blur-xl shadow-2xl">
-          <div className="w-16 h-16 mx-auto rounded-[1.2rem] overflow-hidden shadow-xl shadow-primary/20 flex items-center justify-center mb-8 bg-black/20 ring-1 ring-white/10">
-            <img src="/logo-cold.png" alt="Snowly Logo" className="w-full h-full object-cover" />
+      {/* Decorative Ridge Line (Visual Connection) */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-slate-200 to-transparent opacity-50" />
+
+      <div className="container mx-auto px-6 relative z-10 flex flex-col items-center">
+        <div className="max-w-4xl mx-auto text-center space-y-12">
+          {/* Enhanced Logo Presentation */}
+          <div className="relative inline-block mb-8">
+            <div className="absolute inset-0 bg-brand/20 blur-2xl rounded-full scale-150 animate-pulse" />
+            <div className="w-28 h-28 md:w-32 md:h-32 rounded-[2.2rem] overflow-hidden shadow-2xl shadow-brand/20 flex items-center justify-center bg-white ring-1 ring-slate-100 relative z-10 hover:scale-105 transition-transform duration-700 ease-out">
+              <img
+                src="/favicon.png"
+                alt="Snowly Logo"
+                className="w-full h-full object-cover scale-110"
+              />
+            </div>
           </div>
 
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-white">
-            Ready to drop in?
-          </h2>
-          <p className="text-xl text-white/60 font-light max-w-xl mx-auto text-balance">
-            Join thousands of skiers and riders who are already tracking their
-            season with precision.
-          </p>
+          <div className="space-y-6">
+            <h2 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter text-slate-900 leading-[0.9]">
+              Ready to <br className="hidden md:block" />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand to-accent">
+                drop in?
+              </span>
+            </h2>
+            <p className="text-xl md:text-3xl text-slate-500 font-light max-w-2xl mx-auto text-balance leading-relaxed">
+              Join thousands of skiers and riders who are already tracking their
+              season with precision.
+            </p>
+          </div>
 
-          <div className="pt-8 flex flex-col items-center gap-6">
-            <a href="#" className="inline-block transition-transform duration-300 hover:scale-[1.03] hover:brightness-110 active:scale-95">
-              <img 
-                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" 
-                alt="Download on the App Store" 
-                className="h-[52px] md:h-[60px]" 
+          <div className="pt-8 flex flex-col items-center gap-8 relative z-10">
+            <a
+              href="https://apps.apple.com"
+              className="inline-block transition-all duration-500 hover:scale-[1.05] hover:brightness-110 active:scale-95 shadow-xl hover:shadow-2xl hover:shadow-brand/30 rounded-2xl"
+            >
+              <img
+                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                alt="Download on the App Store"
+                className="h-[64px] md:h-[72px]"
               />
             </a>
-            <p className="text-xs font-semibold text-white/40 uppercase tracking-[0.2em]">
-              Requires iOS 16.0 or later
-            </p>
+            <div className="flex flex-col items-center gap-2">
+              <p className="text-xs font-bold text-slate-400 uppercase tracking-[0.3em]">
+                Requires iOS 16.0 or later
+              </p>
+              <div className="w-8 h-px bg-slate-200" />
+            </div>
           </div>
         </div>
       </div>
