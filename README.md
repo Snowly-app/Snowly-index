@@ -1,36 +1,35 @@
-# Rsbuild project
+# Snowly — Web
 
-## Setup
+The marketing and landing page for [snowly.app](https://snowly.app).
 
-Install the dependencies:
+## Stack
+
+- [React 19](https://react.dev) + TypeScript
+- [Rsbuild](https://rsbuild.rs) (bundler)
+- [Tailwind CSS](https://tailwindcss.com)
+- [Biome](https://biomejs.dev) (lint + format)
+
+## Development
 
 ```bash
 npm install
+npm run dev      # dev server at http://localhost:3000
 ```
 
-## Get started
-
-Start the dev server, and the app will be available at [http://localhost:3000](http://localhost:3000).
+## Build
 
 ```bash
-npm run dev
+npm run build    # production output in dist/
+npm run preview  # preview the production build locally
 ```
 
-Build the app for production:
+## Code Quality
 
 ```bash
-npm run build
+npm run lint     # Biome lint
+npm run format   # Biome format
 ```
 
-Preview the production build locally:
+## License
 
-```bash
-npm run preview
-```
-
-## Learn more
-
-To learn more about Rsbuild, check out the following resources:
-
-- [Rsbuild documentation](https://rsbuild.rs) - explore Rsbuild features and APIs.
-- [Rsbuild GitHub repository](https://github.com/web-infra-dev/rsbuild) - your feedback and contributions are welcome!
+MIT
